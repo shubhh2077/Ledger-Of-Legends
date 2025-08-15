@@ -46,8 +46,8 @@ A comprehensive, intelligent financial analysis tool for your transaction data w
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd ledger-of-legends
+   git clone https://github.com/shubhh2077/Ledger-Of-Legends.git
+   cd Ledger-Of-Legends
    ```
 
 2. **Install dependencies**
@@ -57,7 +57,7 @@ A comprehensive, intelligent financial analysis tool for your transaction data w
 
 3. **Run the application**
    ```bash
-   streamlit run enhanced_app.py
+   run run_app.batch file
    ```
 
 ### How to Use
@@ -192,3 +192,4 @@ If you encounter any issues or have questions:
 ---
 
 **Made with ❤️ for better financial management**
+
