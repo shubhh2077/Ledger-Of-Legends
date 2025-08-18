@@ -191,5 +191,6 @@ If you encounter any issues or have questions:
 
 ---
 
-**Made with ❤️ for better financial management**
+**Made By Shubhh**
+
 
