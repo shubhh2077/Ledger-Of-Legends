@@ -99,6 +99,9 @@ Export:      CSV + JSON + Excel + Custom Reports
 - **CSV Files**: Transaction exports from banks, financial apps, and accounting software
 - **Custom Formats**: Configurable parsing for proprietary export formats
 
+### You can Tryout the App here:
+- **Streamlit Website: ** https://ledger-of-legends.streamlit.app/
+
 ### Quick Installation
 
 ```bash
@@ -619,3 +622,4 @@ When reporting bugs or issues, please include:
 **Made with ❤️ by [Shubhh](https://github.com/shubhh2077)**
 
 </div>
+
