@@ -16,7 +16,7 @@ warnings.filterwarnings('ignore')
 
 # Page configuration
 st.set_page_config(
-    page_title="Ledger of Legends",
+    page_title="FinAlyze",
     page_icon="💰",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -76,7 +76,7 @@ ai_agent = get_ai_agent()
 # Main header
 st.markdown("""
 <div class="main-header">
-    <h1>Ledger of Legends</h1>
+    <h1>FinAlyze</h1>
     <p>Improvised and Complete Financial Data Analysis and Insights</p>
 </div>
 """, unsafe_allow_html=True)
@@ -437,7 +437,7 @@ if df is not None and not df.empty:
 else:
     # Welcome screen
     st.markdown("""
-    ## 🚀 Welcome to Ledger of Legends!
+    ## 🚀 Welcome to FinAlyze!
     
     ### Features:
     - 🤖 **AI-Powered Insights**: Get intelligent recommendations and spending analysis
@@ -447,7 +447,7 @@ else:
     - 📈 **Trend Analysis**: Understand your spending patterns over time
     
     ### How to get started:
-    1. Upload your ledger data (HTML or CSV)
+    1. Upload your ledger data (HTML or CSV), which you can download from: https://takeout.google.com/
     2. Use the filters in the sidebar to analyze specific data
     3. Click "Run AI Analysis" for intelligent insights
     4. Explore different chart types in the Analytics section
