@@ -100,7 +100,7 @@ Export:      CSV + JSON + Excel + Custom Reports
 - **Custom Formats**: Configurable parsing for proprietary export formats
 
 ### You can Tryout the App here:
-- **Streamlit Website: ** https://ledger-of-legends.streamlit.app/
+- **Streamlit Website:** https://ledger-of-legends.streamlit.app/
 
 ### Quick Installation
 
@@ -622,4 +622,5 @@ When reporting bugs or issues, please include:
 **Made with ❤️ by [Shubhh](https://github.com/shubhh2077)**
 
 </div>
+
 
