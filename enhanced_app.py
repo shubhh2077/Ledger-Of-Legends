@@ -130,14 +130,37 @@ def process_data(uploaded_file):
         if 'Type' in df.columns and 'type' not in df.columns:
             df['type'] = df['Type']
 
+        # Create description column if it doesn't exist
+        if 'description' not in df.columns:
+            # Try to build a description from available columns
+            desc_parts = []
+            if 'Name' in df.columns:
+                desc_parts.append(df['Name'].astype(str))
+            if 'Payment Method' in df.columns:
+                desc_parts.append('via ' + df['Payment Method'].astype(str))
+            if 'Status' in df.columns:
+                desc_parts.append('(' + df['Status'].astype(str) + ')')
+            
+            if desc_parts:
+                # Properly concatenate all parts
+                df['description'] = desc_parts[0]
+                for i in range(1, len(desc_parts)):
+                    df['description'] = df['description'] + ' ' + desc_parts[i]
+            else:
+                df['description'] = 'Transaction'
+
         # Coerce types
         if 'date' in df.columns:
             df['date'] = pd.to_datetime(df['date'], errors='coerce')
         if 'amount' in df.columns:
             df['amount'] = pd.to_numeric(df['amount'], errors='coerce')
+        
         # Infer type if still missing
         if 'type' not in df.columns:
-            if 'description' in df.columns:
+            if 'Status' in df.columns:
+                # Use Status to determine type: Success = Credit, others = Debit
+                df['type'] = df['Status'].apply(lambda x: 'Credit' if str(x).lower() == 'success' else 'Debit')
+            elif 'description' in df.columns:
                 df['type'] = df['description'].apply(lambda x: 'Credit' if 'received' in str(x).lower() else 'Debit')
             else:
                 # Default heuristic: mark every 3rd transaction as Credit
@@ -207,7 +230,10 @@ if df is not None and not df.empty:
     ]
     
     if search_term:
-        filtered_df = filtered_df[filtered_df["description"].str.contains(search_term, case=False, na=False)]
+        if 'description' in filtered_df.columns:
+            filtered_df = filtered_df[filtered_df["description"].str.contains(search_term, case=False, na=False)]
+        else:
+            st.sidebar.warning("Search not available - no description column found")
     
     if 'category' in df.columns and selected_categories:
         filtered_df = filtered_df[filtered_df['category'].isin(selected_categories)]
@@ -364,7 +390,11 @@ if df is not None and not df.empty:
             with col2:
                 # Top transactions
                 st.markdown("### 🏆 Top Transactions")
-                top_transactions = filtered_df.nlargest(10, 'amount')[['date', 'description', 'amount', 'type']]
+                # Build column list based on what's available
+                top_cols = ['date', 'amount', 'type']
+                if 'description' in filtered_df.columns:
+                    top_cols.insert(1, 'description')
+                top_transactions = filtered_df.nlargest(10, 'amount')[top_cols]
                 st.dataframe(top_transactions, use_container_width=True)
         
         with tab4:
