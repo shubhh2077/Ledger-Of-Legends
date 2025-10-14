@@ -610,7 +610,7 @@ When reporting bugs or issues, please include:
 
 <div align="center">
 
-**Ledger Of Legends** — AI-Powered Financial Intelligence Platform
+**FinAlyze** — AI-Powered Financial Analysis Platform
 
 *Transform your transaction data into actionable financial insights with cutting-edge AI*
 
@@ -619,9 +619,10 @@ When reporting bugs or issues, please include:
 [![GitHub stars](https://img.shields.io/github/stars/shubhh2077/Ledger-Of-Legends?style=social)](https://github.com/shubhh2077/Ledger-Of-Legends/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/shubhh2077/Ledger-Of-Legends?style=social)](https://github.com/shubhh2077/Ledger-Of-Legends/network/members)
 
-**Made with [Shubhh, Aneesh, Vedant, Om, Aryan]**
+**Made By [Shubhh, Aneesh, Vedant, Om, Aryan]**
 
 </div>
+
 
 
 
