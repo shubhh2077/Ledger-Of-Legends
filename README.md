@@ -619,8 +619,9 @@ When reporting bugs or issues, please include:
 [![GitHub stars](https://img.shields.io/github/stars/shubhh2077/Ledger-Of-Legends?style=social)](https://github.com/shubhh2077/Ledger-Of-Legends/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/shubhh2077/Ledger-Of-Legends?style=social)](https://github.com/shubhh2077/Ledger-Of-Legends/network/members)
 
-**Made with ❤️ by [Shubhh](https://github.com/shubhh2077)**
+**Made with [Shubhh, Aneesh, Vedant, Om, Aryan]**
 
 </div>
+
 
 
